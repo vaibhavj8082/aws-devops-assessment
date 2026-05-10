@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Update packages
+apt update -y
+
+# Install Nginx
+apt install nginx -y
+
+# Fetch EC2 metadata
+INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+AZ=$(curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone)
+
+# Create HTML page
+cat <<EOF > /var/www/html/index.html
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Hello World</title>
+</head>
+<body style="text-align: center; font-family: Arial; margin-top: 100px;">
+        <h1>Hello World!</h1>
+        <p>Instance ID: <strong>$INSTANCE_ID</strong></p>
+        <p>Availability Zone: <strong>$AZ</strong></p>
+        <p>Served by: <strong>Nginx</strong></p>
+</body>
+</html>
+EOF
+
+# Start and enable Nginx
+systemctl start nginx
+systemctl enable nginx
