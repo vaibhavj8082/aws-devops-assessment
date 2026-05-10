@@ -58,6 +58,19 @@ Internet → Application Load Balancer → Target Group → EC2 Instances
 | nginx-server-1 | ap-south-1a | Nginx |
 | nginx-server-2 | ap-south-1b | Nginx |
 
+## Bastion Host Configuration
+
+A temporary bastion host (jump server) was deployed in the public subnet to securely access EC2 instances located in private subnets.
+
+Process followed:
+- SSH access was temporarily enabled for the bastion host
+- The PEM key was securely copied to the bastion instance
+- Private EC2 instances were accessed through the bastion host
+- Nginx installation and configuration were completed on private instances
+- SSH access was removed from the security group after setup completion
+
+This approach improves security by avoiding direct public SSH access to private EC2 instances.
+
 
 ## Application Load Balancer
 - Internet-facing ALB
