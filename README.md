@@ -15,7 +15,7 @@ The infrastructure consists of:
 - Target Group Health Checks
 
 ## Architecture Diagram
-
+![Architecture](Architecture/architecture.png)
 
 ## Architecture Flow
 
