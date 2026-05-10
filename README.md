@@ -5,14 +5,17 @@
 
 This project demonstrates deployment of a secure and highly available web application architecture on AWS.
 
-The infrastructure consists of:
-- A custom VPC
-- Public and Private Subnets across multiple Availability Zones
+## Project Highlights
+
+- Secure VPC Architecture
+- Public and Private Subnets
+- Bastion Host for Secure SSH Access
 - Application Load Balancer
-- EC2 Instances running Nginx
-- NAT Gateways for outbound internet access
-- Security Groups implementing secure access control
-- Target Group Health Checks
+- EC2 Instances in Private Subnets
+- NAT Gateway for Outbound Access
+- Nginx Web Server
+- Security Group Based Access Control
+- Multi-AZ High Availability
 
 ## Architecture Diagram
 ![Architecture](Architecture/Architecture.png)
@@ -123,6 +126,16 @@ http://devops-test-alb-1240014303.ap-south-1.elb.amazonaws.com/
 ![Webpage](Screenshots/output1.png)
 ![](Screenshots/output2.png)
 
+## Automation Using User Data Script
+
+A user-data script was used to automate:
+- Nginx installation
+- Webpage deployment
+- EC2 metadata display
+
+The script dynamically displays:
+- Instance ID
+- Availability Zone
 
 ## Conclusion
 
