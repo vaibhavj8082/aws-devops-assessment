@@ -87,3 +87,25 @@ sudo systemctl enable nginx
 http://devops-test-alb-1240014303.ap-south-1.elb.amazonaws.com/
 
 ## Screenshots
+### VPC Configuration
+![VPC](Screenshots/vpc.png)
+
+### Subnets
+![subnets](Screenshots/subnets.png)
+
+### Security Groups
+![Security Groups](Screenshots/ALB-sg.png)
+![](Screenshots/EC2-sg.png)
+
+### EC2 Instances
+![EC2](Screenshots/instance.png)
+
+### Target Group  
+![Target Group](Screenshots/tg.png)
+
+### Application Load Balancer
+![ALB](Screenshots/alb.png)
+
+### Final Webpage
+![Webpage](Screenshots/output1.png)
+![](Screenshots/output2.png)
