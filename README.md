@@ -98,7 +98,7 @@ http://devops-test-alb-1240014303.ap-south-1.elb.amazonaws.com/
 ![](Screenshots/EC2-sg.png)
 
 ### EC2 Instances
-![EC2](Screenshots/instance.png)
+![EC2](Screenshots/instances.png)
 
 ### Target Group  
 ![Target Group](Screenshots/tg.png)
